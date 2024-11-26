@@ -1,0 +1,124 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+  }
+  
+/* Header Styling */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: 100;
+    overflow: hidden;
+}
+    
+/* Logo Styling */
+.logo-img {
+    width: 150px; /* Adjust size of the logo */
+    height: auto;
+    padding-right: 25px; /* Spacing around logo */
+    padding-left: 25px;
+    padding-top: 25px;
+}
+      
+.navbar-logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+  
+.navbar-nav {
+    display: flex;
+    gap: 20px;
+  }
+  
+.navbar-nav .nav-item {
+    list-style: none;
+  }
+  
+.navbar-nav .nav-link {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+.navbar-nav .nav-link:hover {
+    background-color: #4CAF50;
+    color: #fff;
+    border-radius: 5px;
+  }
+  
+  /* Hero Section */
+  #home {
+    background: url('assets/images/hero-lawn.jpg') no-repeat center center/cover;
+    padding: 80px 20px;
+    color: white;
+  }
+  
+  #home h2 {
+    font-weight: 700;
+  }
+  
+  #home p {
+    font-size: 1.2rem;
+  }
+  
+  #home .btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+  
+  /* Services Section */
+  #services .card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  #services .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  #services .card-title {
+    color: #4CAF50;
+    font-weight: bold;
+  }
+  
+  #services .card-text {
+    color: #555;
+  }
+  
+  /* Footer Styling */
+  footer {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 0;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    #home {
+      padding: 60px 10px;
+    }
+  
+    #home h2 {
+      font-size: 1.8rem;
+    }
+  
+    #home p {
+      font-size: 1rem;
+    }
+  
+    #services .card {
+      margin-bottom: 20px;
+    }
+  }
