@@ -2,7 +2,8 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    padding-top: 300px; /* Adjust to match navbar height */
+    padding-top: 380px; /* Adjust to match navbar height */
+    margin: 0;
   }
   
 /* Header Styling */
@@ -10,8 +11,13 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  height: 380px; /* Adjust this value based on the height of your image/logo */
   z-index: 1000;
+  background: url('assets/images/cesped_small_banner.jpg') no-repeat center center/cover;
+  background-size: cover;
   background-color: rgba(255, 255, 255, 0.9); /* Slight transparency */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   transition: background-color 0.3s ease-in-out; /* Smooth transition for hover effects */
@@ -25,10 +31,19 @@ header {
     padding-left: 25px;
     padding-top: 25px;
 }
+
+.navbar {
+  margin: 0;
+  padding: 0.5rem 1rem; /* Adjust padding for spacing */
+  position: absolute; /* Position navbar relative to the header */
+  bottom: 0; /* Align to the bottom of the header */
+  width: 100%; /* Ensure full width of the navbar */
+  z-index: 2; /* Ensure it's on top of other elements */
+}
       
 .navbar-nav {
     display: flex;
-    gap: 200px;
+    gap: 100px;
   }
   
 .navbar-nav .nav-item {
