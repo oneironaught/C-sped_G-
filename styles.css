@@ -1,160 +1,147 @@
 /* General Styling */
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    padding-top: 380px; /* Adjust to match navbar height */
-    margin: 0;
-  }
-  
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+}
+
 /* Header Styling */
-header {
+.header {
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
-  margin: 0;
-  padding: 0;
-  height: 380px; /* Adjust this value based on the height of your image/logo */
-  z-index: 1000;
-  background: url('assets/images/cesped_small_banner.jpg') no-repeat center center/cover;
-  background-size: cover;
-  background-color: rgba(255, 255, 255, 0.9); /* Slight transparency */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  transition: background-color 0.3s ease-in-out; /* Smooth transition for hover effects */
+  width: 100%;
+  height: auto;
+  z-index: 100;
+  overflow: hidden;
 }
-    
+  
 /* Logo Styling */
 .logo-img {
-    width: 150px; /* Adjust size of the logo */
-    height: auto;
-    padding-right: 25px; /* Spacing around logo */
-    padding-left: 25px;
-    padding-top: 25px;
+  width: 350px; /* Adjust size of the logo */
+  height: auto;
+  padding-right: 25px; /* Spacing around logo */
+  padding-left: 25px;
+  padding-top: 25px;
 }
+    
+.navbar-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-.navbar {
-  margin: 0;
-  padding: 0.5rem 1rem; /* Adjust padding for spacing */
-  position: absolute; /* Position navbar relative to the header */
-  bottom: 0; /* Align to the bottom of the header */
-  width: 100%; /* Ensure full width of the navbar */
-  z-index: 2; /* Ensure it's on top of other elements */
-}
-      
 .navbar-nav {
-    display: flex;
-    gap: 100px;
-  }
-  
-.navbar-nav .nav-item {
-    list-style: none;
-  }
-  
-.navbar-nav .nav-link {
-    font-size: 1rem;
-    font-weight: 500;
-    color: #333;
-    padding: 5px 10px;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-.navbar-nav .nav-link:hover {
-    background-color: #4CAF50;
-    color: #fff;
-    border-radius: 5px;
-  }
-  
-  /* Hero Section */
-  #home {
-    background: url('assets/images/hero-lawn.jpg') no-repeat center center/cover;
-    padding: 80px 20px;
-    color: white;
-  }
-  
-  #home h2 {
-    font-weight: 700;
-  }
-  
-  #home p {
-    font-size: 1.2rem;
-  }
-  
-  #home .btn {
-    font-size: 1rem;
-    padding: 10px 20px;
-  }
-  
-  /* Services Section */
-  #services .card {
-    border: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  #services .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  }
-  
-  #services .card-title {
-    color: #4CAF50;
-    font-weight: bold;
-  }
-  
-  #services .card-text {
-    color: #555;
-  }
+  display: flex;
+  gap: 20px;
+}
 
-  /* About Section */
-#about p {
+.navbar-nav .nav-item {
+  list-style: none;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  padding: 5px 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: #4CAF50;
+  color: #fff;
+  border-radius: 5px;
+}
+
+/* Hero Section */
+#home {
+  background: url('assets/images/hero-lawn.jpg') no-repeat center center/cover;
+  padding: 80px 20px;
+  color: white;
+}
+
+#home h2 {
+  font-weight: 700;
+}
+
+#home p {
   font-size: 1.2rem;
-  line-height: 1.8;
+}
+
+#home .btn {
+  font-size: 1rem;
+  padding: 10px 20px;
+}
+
+/* Services Section */
+#services .card {
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#services .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+#services .card-title {
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+#services .card-text {
   color: #555;
+}
+
+/* About Section */
+#about p {
+font-size: 1.2rem;
+line-height: 1.8;
+color: #555;
 }
 
 /* Testimonials Section */
 blockquote {
-  font-size: 1rem;
-  font-style: italic;
-  color: #333;
-  background: #f9f9f9;
-  padding: 15px;
-  border-left: 5px solid #4CAF50;
+font-size: 1rem;
+font-style: italic;
+color: #333;
+background: #f9f9f9;
+padding: 15px;
+border-left: 5px solid #4CAF50;
 }
 
 blockquote-footer {
-  font-size: 0.9rem;
-  color: #888;
-  margin-top: 10px;
+font-size: 0.9rem;
+color: #888;
+margin-top: 10px;
 }
-  
-  /* Footer Styling */
-  footer {
-    background-color: #4CAF50;
-    color: white;
-    padding: 20px 0;
-  }
-  
-  footer p {
-    margin: 0;
-  }
-  
-  /* Responsive Styling */
-  @media (max-width: 768px) {
-    #home {
-      padding: 60px 10px;
-    }
-  
-    #home h2 {
-      font-size: 1.8rem;
-    }
-  
-    #home p {
-      font-size: 1rem;
-    }
-  
-    #services .card {
-      margin-bottom: 20px;
-    }
+
+/* Footer Styling */
+footer {
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px 0;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  #home {
+    padding: 60px 10px;
   }
 
+  #home h2 {
+    font-size: 1.8rem;
+  }
+
+  #home p {
+    font-size: 1rem;
+  }
+
+  #services .card {
+    margin-bottom: 20px;
+  }
+}
