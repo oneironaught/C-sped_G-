@@ -23,15 +23,9 @@ body {
     padding-top: 25px;
 }
       
-.navbar-logo {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-  
 .navbar-nav {
     display: flex;
-    gap: 20px;
+    gap: 200px;
   }
   
 .navbar-nav .nav-item {
