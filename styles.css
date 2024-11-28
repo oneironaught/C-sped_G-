@@ -2,16 +2,19 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
+    padding-top: 300px; /* Adjust to match navbar height */
   }
   
 /* Header Styling */
-.header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: auto;
-    z-index: 100;
-    overflow: hidden;
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.9); /* Slight transparency */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: background-color 0.3s ease-in-out; /* Smooth transition for hover effects */
 }
     
 /* Logo Styling */
@@ -139,3 +142,4 @@ blockquote-footer {
       margin-bottom: 20px;
     }
   }
+
