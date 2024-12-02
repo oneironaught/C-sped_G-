@@ -2,21 +2,25 @@
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
+  padding-top: 130px; /* Adjust to match navbar height */
 }
 
 /* Header Styling */
-.header {
+header {
   position: fixed;
+  height: 300px;
   top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
-  z-index: 100;
-  overflow: hidden;
-}
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.9); /* Slight transparency */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: background-color 0.3s ease-in-out; /* Smooth transition for hover effects */
+}  
   
 /* Logo Styling */
 .logo-img {
-  width: 350px; /* Adjust size of the logo */
+  width: 200px; /* Adjust size of the logo */
   height: auto;
   padding-right: 25px; /* Spacing around logo */
   padding-left: 25px;
@@ -25,7 +29,7 @@ body {
     
 .navbar-nav {
   display: flex;
-  gap: 40px;
+  gap: 60px;
 }
 
 .navbar-nav .nav-item {
@@ -51,6 +55,7 @@ body {
   background: url('assets/images/hero-lawn.jpg') no-repeat center center/cover;
   padding: 80px 20px;
   color: white;
+  margin-top: 200px;
 }
 
 #home h2 {
@@ -108,6 +113,27 @@ blockquote-footer {
 font-size: 0.9rem;
 color: #888;
 margin-top: 10px;
+}
+
+/* Carousel Section Styling */
+#carousel {
+  background-color: #f9f9f9; /* Light background for the carousel section */
+}
+
+.carousel img {
+  height: 400px; /* Set height for the carousel images */
+  object-fit: cover; /* Ensure images cover the space without distortion */
+}
+
+.carousel-caption h5 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.carousel-caption p {
+  font-size: 1rem;
+  color: black;
 }
 
 /* Footer Styling */
