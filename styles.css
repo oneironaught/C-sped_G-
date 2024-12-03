@@ -31,9 +31,24 @@ header {
   padding-top: 25px;
 }
     
-.navbar-nav {
+.navbar {
   display: flex;
-  gap: 60px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-collapse {
+  display: flex !important; /* Ensure links are always visible */
+  flex-grow: unset; /* Prevent the collapse behavior */
+  justify-content: center; /* Center the links */
+}
+
+.navbar-nav {
+  display: flex; /* Make the links horizontal */
+  gap: 100px; /* Add spacing between links */
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .navbar-nav .nav-item {
@@ -43,15 +58,13 @@ header {
 .navbar-nav .nav-link {
   font-size: 1rem;
   font-weight: 500;
+  text-decoration: none;
   color: #333;
-  padding: 5px 10px;
-  transition: background-color 0.3s, color 0.3s;
+  transition: color 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover {
-  background-color: #4CAF50;
-  color: #fff;
-  border-radius: 5px;
+  color: #4CAF50;
 }
 
 /* Hero Section */
@@ -167,5 +180,16 @@ footer p {
 
   #services .card {
     margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: row; /* Stack links vertically on small screens */
+    gap: 25px; /* Adjust spacing for smaller screens */
+  }
+
+  .navbar {
+    justify-content: center; /* Center the navbar */
   }
 }
