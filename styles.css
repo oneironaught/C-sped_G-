@@ -6,13 +6,13 @@ html {
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
-  padding-top: 130px; /* Adjust to match navbar height */
+  padding-top: 80px; /* Adjust to match navbar height */
 }
 
 /* Header Styling */
 header {
-  position: fixed;
-  height: 300px;
+  position: absolute;
+  height: 200px;
   top: 0;
   left: 0;
   width: 100%;
@@ -21,6 +21,39 @@ header {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   transition: background-color 0.3s ease-in-out; /* Smooth transition for hover effects */
 }  
+
+/* Header H1 Styling */
+header h1 {
+  font-size: 2.8rem; /* Adjust the size for emphasis */
+  font-weight: 700; /* Bold for prominence */
+  text-transform: uppercase; /* Optional: Capitalize all letters */
+  color: white; /* Contrast against a dark or busy background */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add depth with a subtle shadow */
+  margin: 0; /* Remove default margins for better alignment */
+  padding: 20px 0; /* Adjust padding for spacing */
+  text-align: center; /* Center align the text */
+}
+
+/* Header Paragraph Styling */
+header p {
+  font-size: 1.2rem; /* Smaller, readable size */
+  font-weight: 300; /* Light font weight for elegance */
+  color: #f0f0f0; /* Softer color for the paragraph text */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Subtle shadow for readability */
+  margin: 10px 0; /* Add spacing around the text */
+  text-align: center; /* Center align the paragraph */
+  line-height: 1.8; /* Improve readability with better spacing */
+}
+
+/* Optional: Header Content Wrapper */
+header .header-content {
+  position: absolute; /* Position content over the header image */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for perfect centering */
+  text-align: center; /* Center all text */
+  z-index: 2; /* Ensure it appears above the background */
+}
   
 /* Logo Styling */
 .logo-img {
@@ -31,24 +64,23 @@ header {
   padding-top: 25px;
 }
     
+/* General Navbar Styling */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navbar-collapse {
-  display: flex !important; /* Ensure links are always visible */
-  flex-grow: unset; /* Prevent the collapse behavior */
-  justify-content: center; /* Center the links */
+  position: absolute;
+  top: 350px; /* Adjust this value to match the height of your header */
+  width: 100%; /* Ensure it spans the entire width */
+  z-index: 1000; /* Keep it above other elements */
+  background-color: rgba(255, 255, 255, 0.95); /* Slight transparency for professional look */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  padding: 0.5rem 1rem; /* Adjust padding */
 }
 
 .navbar-nav {
-  display: flex; /* Make the links horizontal */
-  gap: 100px; /* Add spacing between links */
-  list-style: none;
-  padding: 0;
+  display: flex; /* Force the nav items into a horizontal row */
+  gap: 30px; /* Add spacing between the links */
   margin: 0;
+  padding: 0;
+  list-style: none; /* Remove default list styling */
 }
 
 .navbar-nav .nav-item {
@@ -56,15 +88,18 @@ header {
 }
 
 .navbar-nav .nav-link {
-  font-size: 1rem;
+  font-size: 1rem; /* Adjust font size for readability */
   font-weight: 500;
   text-decoration: none;
-  color: #333;
-  transition: color 0.3s ease;
+  color: #333; /* Default color for links */
+  padding: 5px 10px; /* Add clickable padding around the links */
+  transition: color 0.3s ease, background-color 0.3s ease; /* Smooth hover effect */
 }
 
 .navbar-nav .nav-link:hover {
-  color: #4CAF50;
+  color: white;
+  background-color: #4CAF50;
+  border-radius: 5px;
 }
 
 /* Hero Section */
@@ -72,7 +107,7 @@ header {
   background: url('assets/images/hero-lawn.jpg') no-repeat center center/cover;
   padding: 80px 20px;
   color: white;
-  margin-top: 200px;
+  margin-top: 0px;
 }
 
 #home h2 {
@@ -90,6 +125,10 @@ header {
 
 /* Services Section */
 #services .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
   border: none;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -98,6 +137,7 @@ header {
 #services .card:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
 }
 
 #services .card-title {
@@ -164,32 +204,191 @@ footer p {
   margin: 0;
 }
 
-/* Responsive Styling */
+/* General Styling for Small Devices */
 @media (max-width: 768px) {
-  #home {
-    padding: 60px 10px;
+  header {
+    height: 180px; /* Reduce header height on small screens */
   }
 
-  #home h2 {
-    font-size: 1.8rem;
+  .header-content {
+    top: 40%; /* Adjust vertical position */
+    padding: 0 10px; /* Add padding for smaller screens */
   }
 
-  #home p {
-    font-size: 1rem;
+  header h1 {
+    font-size: 2rem; /* Smaller font size for heading */
   }
 
-  #services .card {
-    margin-bottom: 20px;
-  }
-}
-
-@media (max-width: 768px) {
-  .navbar-nav {
-    flex-direction: row; /* Stack links vertically on small screens */
-    gap: 25px; /* Adjust spacing for smaller screens */
+  header p {
+    font-size: 1rem; /* Adjust font size for paragraph */
+    line-height: 1.5; /* Slightly tighter line spacing */
   }
 
   .navbar {
-    justify-content: center; /* Center the navbar */
+    flex-wrap: nowrap; /* Prevent wrapping of the navbar content */
+  }
+
+  .navbar-nav {
+    justify-content: flex-end; /* Align links to the right */
+    gap: 10px; /* Reduce spacing between links */
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+    padding: 5px; /* Reduce padding for better fit */
+  }
+
+  #home {
+    margin-top: 180px; /* Adjust margin to match smaller header */
+    padding: 40px 20px; /* Reduce padding for hero section */
+  }
+
+  #home h2 {
+    font-size: 1.8rem; /* Smaller font size for hero heading */
+  }
+
+  #home p {
+    font-size: 1rem; /* Adjust paragraph size */
+  }
+
+  #home .btn {
+    font-size: 1rem; /* Reduce button font size */
+    padding: 8px 15px; /* Compact button padding */
+  }
+}
+
+/* Medium Devices (Tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  header {
+    height: 220px; /* Slightly smaller header */
+  }
+
+  .header-content {
+    top: 45%; /* Adjust content positioning */
+  }
+
+  header h1 {
+    font-size: 2.4rem; /* Reduce heading size */
+  }
+
+  header p {
+    font-size: 1.1rem; /* Adjust paragraph size */
+  }
+
+  .navbar {
+    padding: 0.5rem 1.5rem; /* Adjust navbar padding */
+  }
+
+  .navbar-nav {
+    gap: 15px; /* Adjust spacing between links */
+  }
+
+  #home {
+    margin-top: 220px; /* Match header height */
+    padding: 60px 20px; /* Adjust padding */
+  }
+
+  #home h2 {
+    font-size: 2.2rem; /* Slightly smaller hero heading */
+  }
+
+  #home p {
+    font-size: 1.1rem; /* Adjust paragraph font size */
+  }
+
+  #home .btn {
+    font-size: 1.1rem; /* Adjust button size */
+  }
+}
+
+/* Large Screens (Desktops and Laptops) */
+@media (min-width: 1025px) {
+  header {
+    height: 350px; /* Full-sized header for larger screens */
+  }
+
+  .header-content {
+    top: 50%; /* Center content vertically */
+  }
+
+  header h1 {
+    font-size: 3rem; /* Larger heading for desktops */
+  }
+
+  header p {
+    font-size: 1.2rem; /* Standard paragraph size */
+  }
+
+  .navbar {
+    padding: 0.7rem 2rem; /* Comfortable padding */
+  }
+
+  .navbar-nav {
+    gap: 20px; /* Increased spacing for better readability */
+  }
+
+  #home {
+    margin-top: 300px; /* Match header height */
+    padding: 80px 40px; /* Comfortable padding for hero section */
+  }
+
+  #home h2 {
+    font-size: 2.5rem; /* Larger hero heading */
+  }
+
+  #home p {
+    font-size: 1.2rem; /* Standard paragraph font size */
+  }
+
+  #home .btn {
+    font-size: 1.2rem; /* Larger button for desktops */
+    padding: 10px 20px; /* Comfortable button padding */
+  }
+}
+
+/* Extra Small Devices (Phones in Portrait Mode) */
+@media (max-width: 480px) {
+  header {
+    height: 150px; /* Smaller header for small devices */
+  }
+
+  .header-content {
+    top: 35%; /* Adjust vertical position */
+    padding: 0 5px; /* Add more padding for smaller screens */
+  }
+
+  header h1 {
+    font-size: 1.8rem; /* Smaller font size for heading */
+  }
+
+  header p {
+    font-size: 0.9rem; /* Smaller paragraph size */
+  }
+
+  .navbar {
+    padding: 0.2rem 0.5rem; /* Compact navbar padding */
+  }
+
+  .navbar-nav {
+    flex-direction: column; /* Stack links vertically */
+    gap: 8px; /* Tighter spacing between links */
+  }
+
+  #home {
+    margin-top: 150px; /* Match smaller header height */
+    padding: 30px 10px; /* Reduce padding for hero section */
+  }
+
+  #home h2 {
+    font-size: 1.6rem; /* Smaller hero heading */
+  }
+
+  #home p {
+    font-size: 0.9rem; /* Compact paragraph size */
+  }
+
+  #home .btn {
+    font-size: 0.9rem; /* Smaller button size */
+    padding: 6px 12px; /* Compact button padding */
   }
 }
